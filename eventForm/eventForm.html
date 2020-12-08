@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="WDV341 Intro to PHP Events Input Form" author="Justin Prohaska">
+    <title>Event Form</title>
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(black, red);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 1px solid white;
+            border-radius: 15px;
+            background-color: orangered;
+            padding: 15px;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .flex-container {
+            display: flex;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="container">
+            <h1>WDV341 Intro to PHP</h1>
+            <h2>Events Input Form</h2>
+            <form action="" id="EventInput" method="POST">
+                <h3>Add a new event</h3>
+                <p>
+                    <label for="event_name">Event Name: </label>
+                    <input type="text" id="event_name" name="event_name">
+                </p>
+                <p>
+                    <label for="event_discription">Event Discription: </label>
+                    <input type="text" id="event_discription" name="event_discription">
+                </p>
+                <p>
+                    <label for="event_presenter">Event Presenter: </label>
+                    <input type="text" id="event_presenter" name="event_presenter">
+                </p>
+                <p>
+                    <label for="event_date">Event Date: </label>
+                    <input type="date" id="event_date" name="event_date">
+                </p>
+                <p>
+                    <label for="event_time">Event Time: </label>
+                    <input type="time" id="event_time" name="event_time">
+                </p>
+                <input type="submit" value="Add Event">
+                <input type="reset" value="Reset Form">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

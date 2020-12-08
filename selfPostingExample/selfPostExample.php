@@ -27,7 +27,7 @@ echo "<p>prod_price: $prod_price</p>";
 echo "<p>prod_wagon: $prod_wagon</p>";
 
 //begin data validation!!!
-$balidForm = true; //form validation flag, assume all valid data
+$validForm = true; //form validation flag, assume all valid data
 
 //product color is required!!!
 if($prod_wagon == "na") {
