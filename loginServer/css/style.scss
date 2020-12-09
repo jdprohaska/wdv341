@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.error {
+color: yellow;
+font-style: italic;
+line-height: 0;
+}
+
+body {
+background-image: linear-gradient(black, red);
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: orangered;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+
+input[type=text] {
+background-color: darkblue;
+color: white;
+}
+input[type=date] {
+background-color: darkblue;
+color: white;
+}
+input[type=time] {
+background-color: darkblue;
+color: white;
+}
+input[type=password] {
+    background-color: darkblue;
+    color: white;
+}
+
+textarea {
+background-color: darkblue;
+color: white;
+}
+
+.projectTitle {
+text-decoration: underline;
+}
+
+.tableFormat {
+	border: 1px solid black;
+	margin: 0 auto;
+	background-color: red;
+	
+}
+
+th {
+	border: 1px solid white;
+	padding: 10px;
+    background-color: darkred;
+    color: white;
+	
+}
+
+td {
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+    background-color: darkblue;
+    color: white;
+	
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+p {
+	text-align: center;
+}
+
+a:hover {
+    color: white;
+}

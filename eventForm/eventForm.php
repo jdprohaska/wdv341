@@ -152,6 +152,7 @@ if (isset($_POST['event_submit'])) {
         <div class="container">
             <h1>WDV341 Intro to PHP</h1>
             <h2>Events Input Form</h2>
+           
             <form action="eventForm.php" id="EventInput" method="POST">
                 <h3>Add a new event</h3>
                 <p>
@@ -159,7 +160,7 @@ if (isset($_POST['event_submit'])) {
                     <input type="text" id="event_name" name="event_name" value="<?php echo $event_name; ?>" required>
                 </p>
                 <p>
-                    <label for="event_discription">Event Discription: </label>
+                    <label for="event_description">Event Description: </label>
                     <input type="text" id="event_description" name="event_description" value="<?php echo $event_description; ?>" required>
                 </p>
                 <p>
@@ -176,8 +177,9 @@ if (isset($_POST['event_submit'])) {
                 </p>
                 <input type="submit" value="submit" name="event_submit" id="event_submit">
                 <input type="reset" value="Reset" id="event_reset">
-
+              
             </form>
+            
         </div>
     </div>
 </body>

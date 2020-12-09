@@ -2,14 +2,15 @@
 
 $msg = "";
 
+
 //set up session
 session_start();
 
 
 
 //if the page opens with a valid user...
-if($_SESSION['validUser']== "yes")
-{
+if(isset($_SESSION['validUser'])) {
+	$inUsername = $_POST["loginUser"];
 	//set confirmation msg
 	$msg = "Welcome back ".$inUsername."!";
 }
@@ -29,7 +30,7 @@ else
 		//set up SQL SELECT query for username and password that were entered into form
 		$sql = "SELECT event_user_name, event_user_password FROM event_user_table WHERE event_user_name = '$inUsername' AND event_user_password = '$inPassword'";
 		
-		//run SELCT query
+		//run SELECT query
 		$result = $conn->query($sql);
 		
 		//if the query retrieves 1 record...
@@ -62,42 +63,8 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.error {
-	color: red;
-	font-style: italic;
-	line-height: 0;
-}
+<link rel="stylesheet" href="css/style.css">
 
-body {
-	background-color: #cce0ff;
-}
-
-#container {
-	width: 75%;
-	margin: 2% 10%;
-	border: 2px solid black;
-	text-align: center;
-	background-color: #e6f0ff;
-}
-
-input[type=text] {
-	background-color: #ffffcc;
-}
-
-input[type=password] {
-	background-color: #ffffcc;
-}
-
-textarea {
-	background-color: #ffffcc;
-}
-
-
-.projectTitle {
-	text-decoration: underline;
-}
-</style>
 </head>
 <body>
 <div id ="container">
@@ -105,14 +72,13 @@ textarea {
 
 <?php
 //if the user is a valid user...
-if($_SESSION['validUser'] == "yes")
-{
+if(isset($_SESSION['validUser'])) {
 	//show admin page
 ?>
 
 <h2>Administrator Options</h2>
-<p><a href="addEventLogin.php">Add New Event</a></p>
-<p><a href="selectEventLogin.php">See Events</a></p>
+<p><a href="eventsForm.php">Add New Event</a></p>
+<p><a href="selectEvents.php">See Events</a></p>
 <p><a href="logout.php">Logout</a></p>
 
 <?php
