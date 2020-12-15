@@ -10,7 +10,7 @@ $password = "";  //password used to sign on to the database
 
 $serverName = "localhost"; //identifies the database server
                            //most common is localhost
-$dataBaseName = "wdv341"; //the database to access
+$dataBaseName = "corgiclub"; //the database to access
 
 
 try {
