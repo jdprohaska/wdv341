@@ -9,9 +9,7 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <h2>Accounts</h2>
 
-<div class="links">
-    <a href="account.php">Create Account</a>
-</div>
+
 
 <div class="content-block">
     <div class="table">
@@ -46,6 +44,10 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
+    
+</div>
+<div class="links">
+    <a href="account.php">Create Account</a>
 </div>
 
 <?=template_admin_footer()?>

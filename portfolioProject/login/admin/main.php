@@ -19,15 +19,25 @@ echo <<<EOT
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
 		<title>$title</title>
-		<link href="admin.css" rel="stylesheet" type="text/css">
+        <link href="admin.css" rel="stylesheet" type="text/css">
+        <link href="pushbar.css" rel="stylesheet" type="text/css">
+        <script src="pushbar.js"></script>
+        <script type="text/javascript">
+                     & nbsp new Pushbar({
+                     & nbsp & nbsp	blur: true,
+                     & nbsp & nbsp	overlay: true,
+                     & nbsp });
+								</script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-	</head>
+    </head>
+    <div class="pushbar_main_content">
 	<body class="admin">
         <header>
             <h1>Admin Panel Corgi Club</h1>
             <a class="responsive-toggle" href="#">
                 <i class="fas fa-bars"></i>
             </a>
+            
         </header>
         <aside class="responsive-width-100 responsive-hidden">
             <a href="index.php"><i class="fas fa-users"></i>Accounts</a>
@@ -37,6 +47,10 @@ echo <<<EOT
             <a href="settings.php"><i class="fas fa-tools"></i>Settings</a>
             <a href="../logout.php"><i class="fas fa-sign-out-alt"></i>Log Out</a>
         </aside>
+        <button data-pushbar-target="mypushbar1">
+									   	Open my pushbar 1
+									   	</button>
+        </div>
         <main class="responsive-width-100">
 EOT;
 }
